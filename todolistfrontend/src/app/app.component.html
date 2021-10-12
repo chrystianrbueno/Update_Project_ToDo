@@ -1,66 +1,66 @@
 <html>
-  <title>Projeto todo MVC - Angular + REST</title>
-  <body>
-    <section class="todoapp">
-      <header class="header">
-        <form class="todo-form">
-				
-          <input class="new-todo" placeholder="What needs to be done?" autofocus>
-          
+<title>Projeto todo MVC - Angular + REST</title>
+<body>
+<section class="todoapp">
+  <header class="header">
+    <form class="todo-form">
+
+      <input class="new-todo" placeholder="What needs to be done?" autofocus>
+
+    </form>
+  </header>
+
+  <!--list todos-->
+  <section class="main">
+    <input id="toggle-all" type="checkbox" class="toggle-all">
+    <label for="toggle-all">Mark all as a Complete</label>
+
+    <ul class="todo-list">
+      <li *ngFor="let todo of todos">
+        <div class="view">
+
+          <input class="toggle" type="checkbox">
+          <label>{{todo.descricao}}</label>
+          <button class="destroy"></button>
+
+        </div>
+
+        <form>
+
+          <input class="edit">
+
         </form>
-      </header>
 
-      <!--list todos-->
-      <section class="main">
-        <input id="toggle-all" type="checkbox" class="toggle-all">
-        <label for="toggle-all">Mark all as a Complete</label>
-       
-        <ul class="todo-list">
-          <li>
-            <div class="view">
-            
-              <input class="toggle" type="checkbox"> 
-              <label >Exibe todo</label>
-              <button class="destroy"></button>
-            
-            </div>
-            
-            <form>
-            
-              <input class="edit">
-            
-            </form>
-          
-          </li>
-        </ul>
-      
-      </section>
-      
-      <footer class="footer">
-		
+      </li>
+    </ul>
+
+  </section>
+
+  <footer class="footer">
+
         <span class="todo-count">
-            
-            <strong>Mostra numero incompletos</strong> 
-            
+
+            <strong>Mostra numero incompletos</strong>
+
         </span>
-        
-        <button class="clear-completed">Clear completed</button>
-      
-      </footer>
 
-    </section>
+    <button class="clear-completed">Clear completed</button>
 
-    <footer class="info">
+  </footer>
 
-      <p>
-        Desenvolvido por: <a href="https://github.com/chrystianrbueno/">Chrystian Rocha</a>
-      </p>
-      
-      <p>
-        Baseado no modelo do site <a href="http://todomvc.com">TodoMVC</a>
-      </p>
-  
-    </footer>
+</section>
 
-  </body>
+<footer class="info">
+
+  <p>
+    Desenvolvido por: <a href="https://github.com/chrystianrbueno/">Chrystian Rocha</a>
+  </p>
+
+  <p>
+    Baseado no modelo do site <a href="http://todomvc.com">TodoMVC</a>
+  </p>
+
+</footer>
+
+</body>
 </html>
